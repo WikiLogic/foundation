@@ -1,0 +1,21 @@
+{
+  "name": "wikilogicfoundation",
+  "version": "0.0.1",
+  "description": "Theme files for the Wikilogic Foundation",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WikiLogic/foundation.git"
+  },
+  "author": "The Wikilogic Foundation",
+  "bugs": {
+    "url": "https://github.com/WikiLogic/foundation/issues"
+  },
+  "homepage": "https://github.com/WikiLogic/foundation#readme",
+  "devDependencies": {
+    "node-sass": "^4.5.0"
+  }
+}
