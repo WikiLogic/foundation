@@ -4,7 +4,9 @@
   "description": "Theme files for the Wikilogic Foundation",
   "main": "index.php",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "run-p build:* watch:*",
+    "build:sass": "node-sass scss -o ./ --importer node_modules/node-sass-glob-importer/dist/cli.js --output-style compressed",
+    "watch:sass-base": "sane \"npm run build:sass\" scss --glob=**/*.scss"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,9 @@
   },
   "homepage": "https://github.com/WikiLogic/foundation#readme",
   "devDependencies": {
-    "node-sass": "^4.5.0"
+    "node-sass": "^4.5.0",
+    "node-sass-glob-importer": "^3.0.2",
+    "npm-run-all": "^4.0.1",
+    "sane": "^1.5.0"
   }
 }
