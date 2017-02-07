@@ -1,27 +1,35 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
+    padding: rem($pad * 2) 0;
     border-bottom: 1px solid #ccc;
     background-color: $dark-blue;
     color: white;
 
-    a {
-        @include occluded-underline($dark-blue, $link-blue, $link-blue);
+    &__col {
+        text-align: center;
+        width: 100%;
+        @include nplus1(){
+            margin-top: rem($pad * 2);
+        }
     }
 
-    //padding between matches side padding
-    padding: 0 rem($pad-small / 2);
-    &__col {
-        padding: 0 rem($pad-small / 2);
-        text-align: center;
+    @include breakpoint(medium){
+        justify-content: space-between;
+        padding: 0 rem($pad / 2);
 
-        +.header__col {
-            text-align: right;
-        }
+        &__col {
+            //padding between matches side padding
+            padding: 0 rem($pad / 2);
 
-        &--search {
-            margin-left: auto; //pushes the search over to the right
+            +.header__col {
+                text-align: right;
+            }
+
+            &--search {
+                margin-left: auto; //pushes the search over to the right
+            }
         }
     }
 }

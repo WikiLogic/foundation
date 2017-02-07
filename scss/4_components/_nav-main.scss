@@ -1,0 +1,45 @@
+//nav
+.main-nav {
+    text-align: left;
+    //ul
+    &__list {
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid rgba($rule-color, 0.1);
+        border-bottom: 1px solid rgba($rule-color, 0.1);
+    }
+        //li
+        &__item {
+            margin: 0;
+            padding: 0;
+            @include nplus1(){
+               border-top: 1px solid rgba($rule-color, 0.1);
+            }
+        }
+            //a
+            &__link {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding: rem($pad);
+
+                //overrride occluded underline
+                background-image: none;
+                text-shadow: none; 
+                &:hover { background-image: none; }
+
+                //span
+                &-text {    
+
+                }
+                //span
+                &-arrow {
+
+                }
+
+                //now the actual hover effect (don't do anything critical here, fingers don't emit hover events... yet)
+                &:hover {
+
+                }
+            }
+}

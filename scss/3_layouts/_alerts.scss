@@ -1,7 +1,7 @@
 //Just the wrapper for all the alerts
 .alerts {
 	position: absolute;
-	right: #{$pad + 'px'};
+	right: rem($pad);
 	bottom: 0;
 
 	&__bad {

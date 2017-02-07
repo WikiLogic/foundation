@@ -1,0 +1,21 @@
+//a linking to root
+.site-flag {
+    color: white;
+    margin: rem(9) 0;
+    text-align: center;
+    display: block;
+    &:hover {
+        //border-bottom: 0;
+    }
+
+    //a
+    &__title {
+        font-family: $serif;
+        font-size: rem(24);
+        @include occluded-underline($dark-blue, $link-blue, $link-blue);
+    }
+    
+    &__tagline {
+        font-size: rem(15);
+    }
+}
