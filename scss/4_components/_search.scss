@@ -1,6 +1,17 @@
 .search {
-    
-    &__input {
-        border-radius: 2px;
+
+    &__label {
+
+    }
+        &__label-text {
+
+        }
+
+        &__input {
+            border-radius: 2px;
+        }
+
+    &__submit {
+
     }
 }
