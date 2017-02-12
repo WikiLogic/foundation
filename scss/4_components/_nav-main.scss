@@ -1,58 +1,81 @@
 //nav
 .main-nav {
-    text-align: left;
-    
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    //wraps all (& all uls)
     ul {
         margin: 0;
         padding: 0;
-        //border-top: 1px solid rgba($rule-color, 0.1);
-        border-bottom: 1px solid rgba($rule-color, 0.1);
+    }
+
+    > ul {
+        //height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
     
+        //first level links (all lis)
         li {
             margin: 0;
             padding: 0;
-            font-weight: bold;
-            border-top: 1px solid rgba($grey-6, 0.2);
+
+            + li {
+                margin-top: rem($pad * 4);
+            }
         }
 
+            //wraps the text and the arrow
             a {
+                display: block;
+                line-height: 1;
+                font-family: $serif;
                 width: 100%;
-                display: flex;
-                justify-content: space-between;
-                padding: rem($pad * 1.5) rem($pad);
-                text-transform: uppercase;
+                padding: 0 rem($pad);
+                font-size: rem(32);
             }
-
-                &__link-text {
-
-                }
-                &__link-arrow {
-                    svg {
-                        width: 1em; height: 1em;
-                    }
-                }
     
     //second level
-    ul li ul {
-        padding-left: rem($pad * 2);
+    ul li ul li {
+        margin-top: rem($pad);
 
-        li { 
-            font-weight: normal;
+        a { 
+            font-size: rem(18);
         }
     }
 
-    //third level
-    ul li ul li ul {
-        
-        li { 
-            a { text-transform: none; }
+    @include breakpoint(medium){
+        height: auto;
+
+        > ul {
+            flex-direction: row;
+            align-items: stretch;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        //main menu "boxes"
+        li {
+
+            + li {
+                margin-top: 0;
+            }
+        }
+
+        a {
+            font-size: rem(24);
+        }
+
+        //second level
+        ul li ul li {
+
+            a {
+                font-family: $sans-serif;
+            }
         }
     }
-
-    //fourth level
-    ul li ul li ul li ul {
-        
-    }
-
 }

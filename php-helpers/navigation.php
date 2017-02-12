@@ -48,8 +48,8 @@ $menu = wp_nav_menu(
         'fallback_cb'     => 'wp_page_menu',
         'before'          => '',
         'after'           => '',
-        'link_before'     => '<span class="main-nav__link-text">',
-        'link_after'      => '</span><span class="main-nav__link-arrow">' . $arrow . '</span>',
+        'link_before'     => '',
+        'link_after'      => '',
         'items_wrap'      => '<ul class="main-nav__list">%3$s</ul>',
         'depth'           => 3,
         'walker'          => ''

@@ -7,13 +7,15 @@
     background-color: white;
     color: $grey-1;
 
-
     &__top {
         display: flex;
         align-items: center;
         justify-content: space-between;
         width: 100%;
         padding: rem($pad) 0;
+        position: relative;
+        z-index: 2;
+        background-color: white;
     }
 
         &__menu-button { 
@@ -45,26 +47,51 @@
             }
         }
 
-    &__bottom {
+    //fills the entire screen. The nav itself will have to limit itself to 100vh.
+    &__nav-area {
         width: 100%;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(white, 0.95);
     }
 
+    //checkbox
+    &__checkbox-expander {
+        opacity: 0;
+        display: none;
+
+        + .header__nav-area {
+            opacity: 0;
+            display: none;
+        }
+
+        &:checked {
+            + .header__nav-area {
+                opacity: 1;
+                display: block;
+            }   
+        }
+    }
 
     @include breakpoint(medium){
         justify-content: space-between;
         padding: 0 rem($pad / 2);
 
-        &__col {
-            //padding between matches side padding
-            padding: 0 rem($pad / 2);
+        &__title { //div
 
-            +.header__col {
-                text-align: right;
+            &-text { //a
+                font-size: rem(34);
             }
+        }
 
-            &--search {
-                margin-left: auto; //pushes the search over to the right
-            }
+        &__nav-area {
+            position: static;
+            padding: rem($pad) 0;
+            border-top: 1px solid $light-rule-color;
         }
     }
 }
