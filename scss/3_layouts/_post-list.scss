@@ -1,0 +1,25 @@
+.post-list {
+    padding: rem($pad);
+
+    &__post {
+        padding: rem($pad);
+        max-width: $site-width;
+        margin: 0 auto;
+
+        &-header {
+            border-bottom: 1px solid $rule-color;
+            margin-bottom: rem($pad);
+        }
+            &-title { //h2
+                font-weight: bold;
+            }
+        
+        &-body {
+            
+        }
+
+        &-footer {
+
+        }
+    }
+}

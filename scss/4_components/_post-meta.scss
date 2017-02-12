@@ -1,0 +1,13 @@
+.post-meta {
+
+    display: flex;
+    justify-content: space-between;
+
+    &__date {
+
+    }
+
+    &__category {
+        text-align: right;
+    }
+}
