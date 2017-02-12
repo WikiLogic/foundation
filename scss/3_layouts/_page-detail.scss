@@ -1,0 +1,23 @@
+.page-detail {
+
+    &__header {
+        padding: rem($pad) 0;
+        background-color: $a3;
+        color: white;
+    }
+        &__title {
+            max-width: $site-width;
+            margin: 0 auto;
+            font-size: rem(26);
+        }
+
+    &__body {
+        max-width: $site-width;
+        margin: 0 auto;
+        padding: rem($pad * 2) 0;
+    }
+
+    &__footer {
+
+    }
+}
