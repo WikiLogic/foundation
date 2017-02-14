@@ -21,6 +21,7 @@
         background-color: transparent;
         border: 1px solid white;
         padding: rem($pad) rem($pad * 2);
+        margin-bottom: rem($pad);
 
         &-text {
             color: white;
@@ -35,6 +36,17 @@
             fill: white;
             display: inline-block;
             vertical-align: middle;
+        }
+    }
+
+    //small link under the button linking to a more in depth description of WL
+    &__link { //a
+        font-style: italic;
+        font-family: sans-serif;
+        display: block;
+        color: white;
+        &:hover {
+            text-decoration: underline;
         }
     }
 }

@@ -1,10 +1,16 @@
 //grid of cards calling out what WL can be used for
 .uses {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: rem($pad);
     &__use {
+        margin: rem($pad * 2) rem($pad);
         padding: rem($pad * 2);
         border: 1px solid $rule-color;
-
+        width: 25%;
+        max-width: 400px;
+        min-width: 300px;
 
         &-title {
             
