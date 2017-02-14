@@ -1,0 +1,16 @@
+//grid of cards calling out what WL can be used for
+.uses {
+
+    &__use {
+        padding: rem($pad * 2);
+        border: 1px solid $rule-color;
+
+
+        &-title {
+            
+        }
+        &-body {
+
+        }
+    }
+}
