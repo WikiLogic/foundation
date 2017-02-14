@@ -48,12 +48,12 @@
         }
     }
 
-    @include breakpoint(medium){
+    @include breakpoint(large){
         height: auto;
 
         > ul {
             flex-direction: row;
-            align-items: stretch;
+            align-items: center;
             width: 100%;
             max-width: 900px;
         }
@@ -67,15 +67,22 @@
         }
 
         a {
-            font-size: rem(24);
+            font-size: rem(16);
+            font-weight: bold;
+            font-family: $sans-serif;
+            text-transform: uppercase;
+            padding: rem($pad * 2) rem($pad * 3);
         }
 
-        //second level
-        ul li ul li {
+        //second level - no longer, for now
+        ul li ul { display: none; }
+        // ul li ul li {
 
-            a {
-                font-family: $sans-serif;
-            }
-        }
+        //     a {
+        //         text-transform: capitalize;
+        //         font-size: rem(16);
+        //         padding: rem($pad) 0;
+        //     }
+        // }
     }
 }

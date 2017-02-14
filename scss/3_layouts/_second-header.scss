@@ -1,0 +1,20 @@
+.second-header {
+    
+    display: none;
+
+    @include breakpoint(medium) {
+
+        display: flex;
+
+
+        &__donate {
+
+        }
+        &__sub-menu {
+
+        }
+        &__search {
+
+        }
+    }
+}
