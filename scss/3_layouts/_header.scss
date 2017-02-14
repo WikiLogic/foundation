@@ -77,36 +77,28 @@
         }
     }
 
-    //nav items pop under the menu in a row.
-    @include breakpoint(medium){
-        justify-content: space-between;
-        padding: 0 rem($pad / 2);
-
-        &__title { //div
-
-            &-text { //a
-                font-size: rem(34);
-            }
-        }
-
-        &__nav-area {
-            position: static;
-            padding: rem($pad) 0;
-            //border-top: 1px solid $light-rule-color;
-        }
-    }
 
     //nav items pop into the main header bar alongside the logo
     @include breakpoint(large){
         flex-direction: row;
+        justify-content: space-between;
+        padding: 0 rem($pad / 2);
+
         &__top {
             width: auto;
             padding: 0;
         }
+            &__title { //div
+
+                &-text { //a
+                    font-size: rem(34);
+                }
+            }
             &__menu-button { display: none; } //there's enough space to show all the buttons, so no need for the toggle
             &__search-button { display: none; } //show the input by default on larger screens?
 
         &__nav-area { 
+            position: static;
             width: auto;
             display: block !important; //overriding the checkbox +
             opacity: 1 !important; //and again
