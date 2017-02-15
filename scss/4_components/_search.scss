@@ -1,17 +1,36 @@
-.search {
+.search { //form
+    position: relative;
+    border: 1px solid $link-blue;
+    border-radius: 50px;
+    background: white;
+    width: 100%;
 
     &__label {
-
+        padding: rem($pad) rem($pad * 2);
+        display: block;
     }
         &__label-text {
 
         }
 
         &__input {
-            border-radius: 2px;
+            padding: 0;
+            width: 100%;
+            display: block;
+            font-size: rem(25);
         }
 
-    &__submit {
+    &__submit {//button
+        position: absolute;
+        right: rem($pad * 2);
+        top: 0;
+        bottom: 0;
 
+        svg {
+            height: 100%;
+            width: rem(25);
+            padding: 2px;
+            fill: $link-blue;
+        }
     }
 }

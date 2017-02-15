@@ -2,9 +2,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    //border-bottom: 1px solid #ccc;
-    //background-color: $dark-blue;
-    //background-color: white;
+    position: relative;
     color: $grey-1;
 
     &__top {
@@ -37,7 +35,7 @@
             }
         }
 
-        &__search-button { 
+        &__search-close { 
             padding: rem($pad);
 
             svg {
@@ -47,8 +45,48 @@
             }
         }
 
+        //wraps the absolute stuff
+        &__top-search {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            padding: rem($pad) 0;
+            background: white;
+            position: absolute;
+            top: 0;
+            z-index: 3;
+        }
+            //sits on top of the X
+            &__search-open { //label
+                position: absolute;
+                right: 0;
+                width: 30px;
+                padding: 5px;
+                background: white;
+                cursor: pointer;
+                svg { width: 100%; height: 100%; fill: $link-blue; }
+            }
+
+        //checkbox input
+        &__search-toggler {
+            opacity: 0;
+            display: none;
+
+            + .header__top-search {
+                opacity: 0;
+                display: none;
+            }
+
+            &:checked {
+                + .header__top-search {
+                    opacity: 1;
+                    display: flex;
+                }   
+            }
+        }
+
     //fills the entire screen. The nav itself will have to limit itself to 100vh.
-    &__nav-area {
+    &__bottom {
         width: 100%;
         position: absolute;
         z-index: 1;
@@ -60,17 +98,17 @@
     }
 
     //checkbox
-    &__checkbox-expander {
+    &__bottom-expander {
         opacity: 0;
         display: none;
 
-        + .header__nav-area {
+        + .header__bottom {
             opacity: 0;
             display: none;
         }
 
         &:checked {
-            + .header__nav-area {
+            + .header__bottom {
                 opacity: 1;
                 display: block;
             }   
@@ -97,7 +135,7 @@
             &__menu-button { display: none; } //there's enough space to show all the buttons, so no need for the toggle
             &__search-button { display: none; } //show the input by default on larger screens?
 
-        &__nav-area { 
+        &__bottom { 
             position: static;
             width: auto;
             display: block !important; //overriding the checkbox +
