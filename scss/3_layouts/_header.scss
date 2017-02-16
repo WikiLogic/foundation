@@ -59,4 +59,47 @@
             &-toggle-magnifyer { display: none; }
         }
     }
+
+    //skip tablet and head straight into desktop. Tablet styling is weird and awkward in my opinion. Just, don't go there.
+    @include breakpoint(large){
+        justify-content: space-between;
+        position: relative; //specifically not on small screens for the main nav full screen. Here on larger screens for the search overlay
+
+        &__menu-toggle { display: none; }
+
+        &__title { 
+            text-align: left; 
+            width: auto; 
+            margin-right: auto; 
+            padding-left: rem($pad);
+        }
+
+        &__nav { 
+            position: static; 
+            padding-top: 0;
+            display: block;
+            opacity: 1;
+            background-color: transparent;
+        }
+
+        &__search { 
+            position: absolute; 
+            right: 40px; 
+            -webkit-box-shadow: 0px 0px 6px 0px rgba(0,76,111,0.4);
+            -moz-box-shadow: 0px 0px 6px 0px rgba(0,76,111,0.4);
+            box-shadow: 0px 0px 6px 0px rgba(0,76,111,0.4);
+            border-radius: 25px;
+        }
+
+         &__search-toggle {
+             &-x { fill: white !important; } //overriding the svg default set up top
+         }
+
+        &__search-toggler:checked + .header {
+            background-color: $link-blue;
+            .header__title { width: auto; display: block; } //overriding the hiding behaviour from the smaller screen
+            .header__search { left: 50%; width: auto; }
+        }
+
+    }
 }
