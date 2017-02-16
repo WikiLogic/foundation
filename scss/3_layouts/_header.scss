@@ -1,146 +1,62 @@
 .header {
+    //default for the various svg icons in the header
+    svg {
+        width: 1em; height: 1em;
+        fill: $link-blue;
+        margin: rem($pad);
+    }
+    input[type="checkbox"], 
+    &__search-toggler { opacity: 0; display: none; } //The search toggler is actually just above the header as it has to mutate a bunch of things
+
     display: flex;
-    flex-direction: column;
     align-items: center;
-    position: relative;
-    color: $grey-1;
+    min-height: 62px; // --------------- magic number for absolute nav
 
-    &__top {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        padding: rem($pad) 0;
-        position: relative;
-        z-index: 2;
-        //background-color: white;
+    &__menu-toggle { //label
+        cursor: pointer;
+        svg { display: block; }
     }
 
-        &__menu-button { 
-            padding: rem($pad);
-
-            svg {
-                width: 1em; height: 1em;
-                fill: $link-blue;
-                display: block;
-            }
-        }
-        
-        &__title { //div
-            padding: rem($pad);
-
-            &-text { //a
-                font-family: $serif;
-                font-size: rem(24);
-            }
-        }
-
-        &__search-close { 
-            padding: rem($pad);
-
-            svg {
-                width: 1em; height: 1em;
-                fill: $link-blue;
-                display: block;
-            }
-        }
-
-        //wraps the absolute stuff
-        &__top-search {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            padding: rem($pad) 0;
-            background: white;
-            position: absolute;
-            top: 0;
-            z-index: 3;
-        }
-            //sits on top of the X
-            &__search-open { //label
-                position: absolute;
-                right: 0;
-                width: 30px;
-                padding: 5px;
-                background: white;
-                cursor: pointer;
-                svg { width: 100%; height: 100%; fill: $link-blue; }
-            }
-
-        //checkbox input
-        &__search-toggler {
-            opacity: 0;
-            display: none;
-
-            + .header__top-search {
-                opacity: 0;
-                display: none;
-            }
-
-            &:checked {
-                + .header__top-search {
-                    opacity: 1;
-                    display: flex;
-                }   
-            }
-        }
-
-    //fills the entire screen. The nav itself will have to limit itself to 100vh.
-    &__bottom {
+    &__title { //div wrapping link
+        font-family: $serif;
+        font-size: rem(24);
         width: 100%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    &__nav { //div
         position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(white, 0.95);
+        top: 62px; bottom: 0; // --------------- magic number for absolute nav
+        left: 0; right: 0;
+        background-color: rgba(white, 0.95);
+        padding-top: rem($pad * 10);
+        display: none; opacity: 0;
     }
 
-    //checkbox
-    &__bottom-expander {
-        opacity: 0;
-        display: none;
-
-        + .header__bottom {
-            opacity: 0;
-            display: none;
-        }
-
-        &:checked {
-            + .header__bottom {
-                opacity: 1;
-                display: block;
-            }   
-        }
+    &__search { //div wrapping form.search
+        width: 0;
+        overflow: hidden;
     }
 
+    &__search-toggle { //label
+        cursor: pointer;
+        &-magnifyer { display: block; } //svg
+        &-x { display: none; } //svg
+    }
 
-    //nav items pop into the main header bar alongside the logo
-    @include breakpoint(large){
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 rem($pad / 2);
+    //============= Main nav mobile toggle on
+    &__nav-toggler:checked + .header__nav { 
+        display: block; opacity: 1;
+    }
 
-        &__top {
-            width: auto;
-            padding: 0;
-        }
-            &__title { //div
-
-                &-text { //a
-                    font-size: rem(34);
-                }
-            }
-            &__menu-button { display: none; } //there's enough space to show all the buttons, so no need for the toggle
-            &__search-button { display: none; } //show the input by default on larger screens?
-
-        &__bottom { 
-            position: static;
-            width: auto;
-            display: block !important; //overriding the checkbox +
-            opacity: 1 !important; //and again
-            padding: 0;
+    //============= Search form mobile toggle on (wraps the whole header
+    &__search-toggler:checked + .header {
+        .header__title { width: 0; display: none; }
+        .header__search { 
+            width: 100%; 
+            &-toggle-x { display: block; }
+            &-toggle-magnifyer { display: none; }
         }
     }
 }
