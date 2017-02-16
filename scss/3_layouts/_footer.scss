@@ -1,7 +1,22 @@
 .footer {
-    display:flex;
+    background-color: $grey-1;
+    color: white;
+    padding: rem($pad);
 
-    &__col {
+    &__top { //div wrapping the bottom nav
+        display:flex;
+        border-bottom: 1px solid $light-rule-color;
+    }
 
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+
+        &-left {
+
+        }
+        &-right {
+
+        }
     }
 }

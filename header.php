@@ -51,8 +51,31 @@
 
 			<input type="checkbox" id="main-nav-toggler" name="main-nav-toggler" class="header__nav-toggler"/>
 			<div class="header__nav">
-				<nav class="main-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-					<?php require('php-helpers/navigation.php'); ?>
+				<nav class="nav nav--header" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php
+						$menu = wp_nav_menu(
+							array(
+								'theme_location'  => 'main-nav',
+								'menu'            => '',
+								'container'       => '',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => '',
+								'menu_id'         => '',
+								'echo'            => false,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '<ul class="nav__list">%3$s</ul>',
+								'depth'           => 3,
+								'walker'          => ''
+							)
+						);
+
+						if ( $menu ) {  echo $menu; }
+					?>
 				</nav>
 			</div>
 

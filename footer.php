@@ -1,25 +1,70 @@
 		<footer class="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-			<div class="footer__col">
-				<nav role="navigation">
-					<?php wp_nav_menu(array(
-					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-					'container_class' => 'footer-links cf',         // class of container (should you choose to use it)
-					'menu' => __( 'Footer Links', 'bonestheme' ),   // nav name
-					'menu_class' => 'nav footer-nav cf',            // adding custom nav class
-					'theme_location' => 'footer-links',             // where it's located in the theme
-					'before' => '',                                 // before the menu
-					'after' => '',                                  // after the menu
-					'link_before' => '',                            // before each link
-					'link_after' => '',                             // after each link
-					'depth' => 0,                                   // limit the depth of the nav
-					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
-					)); ?>
+			<div class="footer__top">
+				<!-- footer version of the main nav -->
+				<nav class="nav nav--footer" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php
+						$menu = wp_nav_menu(
+							array(
+								'theme_location'  => 'main-nav',
+								'menu'            => '',
+								'container'       => '',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => '',
+								'menu_id'         => '',
+								'echo'            => false,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '<ul class="nav__list">%3$s</ul>',
+								'depth'           => 3,
+								'walker'          => ''
+							)
+						);
+
+						if ( $menu ) {  echo $menu; }
+					?>
 				</nav>
 			</div>
 
-			<div class="footer__col">
-				<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+			<div class="footer__bottom">
+				<div class="footer__bottom-left">
+					<div class="footer__util-nav">
+						<nav class="nav nav--util" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+							<?php
+								$menu = wp_nav_menu(
+									array(
+										'theme_location'  => 'util-nav',
+										'menu'            => '',
+										'container'       => '',
+										'container_class' => '',
+										'container_id'    => '',
+										'menu_class'      => '',
+										'menu_id'         => '',
+										'echo'            => false,
+										'fallback_cb'     => 'wp_page_menu',
+										'before'          => '',
+										'after'           => '',
+										'link_before'     => '',
+										'link_after'      => '',
+										'items_wrap'      => '<ul class="nav__list">%3$s</ul>',
+										'depth'           => 3,
+										'walker'          => ''
+									)
+								);
+
+								if ( $menu ) {  echo $menu; }
+							?>
+						</nav>
+					</div>
+					<p class="footer__copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+				</div>
+				<div class="footer__bottom-right">
+					Social
+				</div>
 			</div>
 
 

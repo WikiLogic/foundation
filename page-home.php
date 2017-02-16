@@ -30,8 +30,6 @@ get_header(); ?>
 
 			</div>
 
-			<?php require('php-helpers/second-header.php'); ?>
-
 			<!-- Loop through "uses" as cards -->
 
 
