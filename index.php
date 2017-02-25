@@ -32,11 +32,11 @@
 				-->
 				<div class="post-list__post-footer">
 					<div class="post-meta">
-						<div class="post-meta__date">
+						<div class="post-meta__left">
 							<?php echo get_the_time(get_option('date_format')); ?>
 						</div>
 
-						<div class="post-meta__category">
+						<div class="post-meta__right">
 							<?php printf( '%1$s' , get_the_category_list(', ') ); ?>
 						</div>
 					</div>

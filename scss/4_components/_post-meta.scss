@@ -1,13 +1,15 @@
 .post-meta {
-    font-size: rem(16);
+    font-size: rem(18);
     display: flex;
     justify-content: space-between;
+    font-style: italic;
+    font-family: $serif;
 
-    &__date {
+    &__left {
 
     }
 
-    &__category {
+    &__right {
         text-align: right;
     }
 }
