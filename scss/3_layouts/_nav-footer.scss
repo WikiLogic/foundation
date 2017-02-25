@@ -20,12 +20,10 @@
 
         //first level links only
         > li {
-            margin-top: rem($pad * 2);
-            padding-bottom: rem($pad * 3); //space out the bottom border
+            padding: rem($pad * 2) rem($pad * 2);
             border-bottom: 1px solid $light-rule-color;
 
             > a {
-                opacity: 0.8;
                 font-size: rem(22);
             }
         }
@@ -47,10 +45,17 @@
     }
 
     @include breakpoint(large){
+        border-bottom: 1px solid $light-rule-color;
+
         > ul {
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: center;
             align-content: flex-start;
+
+            > li {
+                margin: 0 rem($pad);
+                border-bottom: 0;
+            }
         }
     }
 }

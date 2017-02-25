@@ -1,0 +1,9 @@
+.social-icons-row {
+    display: flex;
+    padding: rem($pad / 2);
+    justify-content: center;
+
+    &__icon {
+        padding: rem($pad / 2);
+    }
+}

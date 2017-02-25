@@ -1,0 +1,47 @@
+//nav
+.nav--util.nav {
+    width: 100%;
+    padding: rem($pad);
+
+    //defaults
+    ul { margin: 0; padding: 0; }
+    li { margin: 0; padding: 0; }
+    a { 
+        color: white; 
+        display: block;
+        font-family: $sans-serif;
+        width: 100%;
+    }
+
+    //wraps the first level list
+    > ul {  
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        //first level links only
+        > li {
+            display: block;
+            padding: rem($pad);
+
+            > a {
+                font-size: rem(14);
+            }
+        }
+    }
+
+    @include breakpoint(medium){
+        padding: 0;
+
+        > ul {
+            flex-direction: row;
+            justify-content: space-between;
+            align-content: flex-start;
+
+            > li {
+                padding-left: 0;
+                padding-right: rem($pad * 2);
+            }
+        }
+    }
+}
