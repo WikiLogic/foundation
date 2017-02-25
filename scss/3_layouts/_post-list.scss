@@ -1,17 +1,22 @@
 .post-list {
-    padding: rem($pad);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: streatch;
+    max-width: 2000px;
+    margin: 0 auto;
 
     &__post {
-        padding: rem($pad);
-        max-width: $site-width;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: rem($pad * 2);
+        width: 100%;
 
         &-header {
-            border-bottom: 1px solid $rule-color;
             margin-bottom: rem($pad);
         }
             &-title { //h2
                 font-weight: bold;
+                font-size: rem(28);
             }
         
         &-body {
@@ -19,7 +24,18 @@
         }
 
         &-footer {
+            margin-top: auto;
+            border-bottom: 1px solid $rule-color;
+        }
 
+        @include breakpoint (medium){
+            width: 50%;
+        }
+        @include breakpoint (large){
+            width: 33%;
+        }
+        @include breakpoint (super){
+            width: 25%;
         }
     }
 }

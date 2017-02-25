@@ -12,7 +12,6 @@
     }
 
     > ul {
-        //height: 60vh;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -23,9 +22,7 @@
             margin: 0;
             padding: 0;
 
-            + li {
-                margin-top: rem($pad * 4);
-            }
+            + li { margin-top: rem($pad * 4); }
         }
 
             //wraps the text and the arrow
@@ -40,11 +37,9 @@
     
     //second level
     ul li ul li {
-        margin-top: rem($pad);
 
-        a { 
-            font-size: rem(18);
-        }
+        margin-top: rem($pad);
+        a { font-size: rem(18); }
     }
 
     @include breakpoint(large){
@@ -59,10 +54,8 @@
 
         //main menu "boxes"
         li {
-
-            + li {
-                margin-top: 0;
-            }
+            + li { margin-top: 0; }
+            &.selected a { border-bottom: 1px solid $link-blue; }
         }
 
         a {
@@ -70,18 +63,11 @@
             font-weight: bold;
             font-family: $sans-serif;
             text-transform: uppercase;
-            padding: rem($pad * 2) rem($pad * 3);
+            margin: rem($pad);
+            padding: rem($pad) rem($pad * 2);
         }
 
         //second level - no longer, for now
         ul li ul { display: none; }
-        // ul li ul li {
-
-        //     a {
-        //         text-transform: capitalize;
-        //         font-size: rem(16);
-        //         padding: rem($pad) 0;
-        //     }
-        // }
     }
 }

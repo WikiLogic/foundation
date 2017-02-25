@@ -1,23 +1,13 @@
-
 <?php get_header(); ?>
-
 		
+	<div class="page-detail__header">
+		<h1 class="page-detail__title" itemprop="headline">The blog</h1>
+	</div>
 	<div class="post-list">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<div class="post-list__post">
-
 				<div class="post-list__post-header">
 					<h2 class="post-list__post-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
-					<div class="post-meta">
-						<div class="post-meta__date">
-							<?php echo get_the_time(get_option('date_format')); ?>
-						</div>
-
-						<div class="post-meta__category">
-							<?php printf( '%1$s' , get_the_category_list(', ') ); ?>
-						</div>
-					</div>
 				</div>
 
 				<!--
@@ -32,7 +22,7 @@
 				-->
 
 				<div class="post-liat__post-body">
-					<?php the_content(); ?>
+					<?php the_excerpt(); ?>
 				</div>
 
 				<!--
@@ -41,6 +31,15 @@
 				</p>
 				-->
 				<div class="post-list__post-footer">
+					<div class="post-meta">
+						<div class="post-meta__date">
+							<?php echo get_the_time(get_option('date_format')); ?>
+						</div>
+
+						<div class="post-meta__category">
+							<?php printf( '%1$s' , get_the_category_list(', ') ); ?>
+						</div>
+					</div>
 					<div class="post-tags">
 						<?php the_tags( '<div class="post-tags__tag">' . __( 'Tags:', 'bonestheme' ) . '</div> '); ?>
 					</div>
@@ -62,5 +61,5 @@
 		<?php endif; ?>
 
 
-<?php get_sidebar(); ?>
+<?php //get_sidebar(); ?>
 <?php get_footer(); ?>	

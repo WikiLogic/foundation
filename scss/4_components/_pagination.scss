@@ -1,0 +1,19 @@
+.pagination { //nav
+
+    > ul.page-numbers {
+        display: flex;
+        justify-content: flex-end;
+        margin: 0;
+        padding: 0;
+
+        > li {
+            padding: rem($pad);
+        }
+    }
+
+    a {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+}
