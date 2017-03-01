@@ -13,10 +13,13 @@ get_header(); ?>
 			<!-- big jumbotron with CTA button -->
 			<div class="page-hero">
 
-				<h2 class="page-hero__title">What is Wikilogic?</h2>
+				<h2 class="page-hero__title">The Wikilogic Foundation</h2>
+				<p class="page-hear__sub-title">
+				“Don’t raise your voice, improve your argument”<br />
+				<small>– Demond Tutu</small></p>
 				<button class="page-hero__button">
 					<span class="page-hero__button-text">
-						3 min Intro video
+						What is Wikilogic?
 					</span>
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
 						<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M45.563,30.826l-22,15
@@ -24,9 +27,11 @@ get_header(); ?>
 							c0.328-0.174,0.724-0.15,1.031,0.058l22,15C45.836,29.36,46,29.669,46,30S45.836,30.64,45.563,30.826z"/>
 					</svg>
 				</button>
+				<!--
 				<a href="/what-is-wikilogic" class="page-hero__link">
 					In depth article
 				</a>
+				-->
 
 			</div>
 

@@ -1,12 +1,12 @@
 .bg-pattern {
 	background-image: repeating-linear-gradient(
 			30deg,
-			rgba(darken($WL_Blue, 8%), 0.5),
-			rgba(darken($WL_Blue, 8%), 0.5) 8px,
-			rgba(darken($WL_Blue, 13%), 0.5) 9px,
-			rgba(darken($WL_Blue, 8%), 0.5) 10px
+			rgba(darken($blue, 8%), 0.5),
+			rgba(darken($blue, 8%), 0.5) 8px,
+			rgba(darken($blue, 13%), 0.5) 9px,
+			rgba(darken($blue, 8%), 0.5) 10px
 		),
-		radial-gradient(circle farthest-corner at 50% 20%, rgba(darken($WL_Blue, 5%), 0.5), black);
+		radial-gradient(circle farthest-corner at 50% 20%, rgba(darken($blue, 5%), 0.5), black);
 
 	&--red {
 		background-image: repeating-linear-gradient(

@@ -2,7 +2,7 @@
 // .text-color {
 // 	&--white { color: white !important; fill: white; svg { fill: white; } @include light-typography(); }
 // 	&--red { color: $WL_Red !important; }
-// 	&--blue { color: $WL_Blue !important; }
+// 	&--blue { color: $blue !important; }
 // 	&--green { color: $WL_Green !important; }
 // 	&--black { color: black !important; fill: black; svg { fill: black; } @include dark-typography(); }
 // }
@@ -11,7 +11,7 @@
 	&-black { fill: black !important; }
 	&-white { fill: white !important; }
 	&--red { color: $WL_Red !important; }
-	&--blue { color: $WL_Blue !important; }
+	&--blue { color: $blue !important; }
 	&--green { color: $WL_Green !important; }
 }
 
@@ -19,20 +19,20 @@
 	&--black { fill: black !important; }
 	&--white { fill: white !important; }
 	&--red { fill: $WL_Red !important; }
-	&--blue { fill: $WL_Blue !important; }
+	&--blue { fill: $blue !important; }
 	&--green { fill: $WL_Green !important; }
 }
 
 .hover-color {
 	&--grey-2:hover { color: $grey-2 !important; }
 	&--red:hover { color: $WL_Red !important; }
-	&--blue:hover { color: $WL_Blue !important; }
+	&--blue:hover { color: $blue !important; }
 	&--green:hover { color: $WL_Green !important; }
 }
 
 .hover-fill {
 	&--grey-2:hover { fill: $grey-2 !important; }
 	&--red:hover { fill: $WL_Red !important; }
-	&--blue:hover { fill: $WL_Blue !important; }
+	&--blue:hover { fill: $blue !important; }
 	&--green:hover { fill: $WL_Green !important; }
 }

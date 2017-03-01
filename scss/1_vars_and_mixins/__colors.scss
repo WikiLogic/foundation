@@ -1,11 +1,11 @@
 /* colors */
 $WL_Red:		#F25454; 
 $WL_Green:		#31D332; 
-$WL_Blue: 		#5f9aec;
 
-$dark-blue:     #002b4c;
-$light-blue:    #0a4471;
-$link-blue:     #0a88c5;
+$blue-dark:  #0050A5;
+$blue: 		 #008ddc;
+$blue-light: #00C7FF;
+
 
 /* shades of grey */
 $off-white:     #f3f7fb;
@@ -23,23 +23,12 @@ $grey-2:		#223856;
 $grey-1:		#131E2D;  //default grey-dark
 $text-black: 	rgba(0,0,0,0.87);
 
-//Cool pallet
-$g6: #EEE7DB;
-$g5: #CDC3BD;
-$g4: #CCBDC1;
-$g3: #ADA0A2;
-$g2: #5D495F;
-$g1: #4C2455;
 
-/*
- adobe color: https://color.adobe.com/create/color-wheel/?base=2&rule=Analogous&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.0006263063601074008,0.12184429165229266,0.8225490196078432,0.0006567632128992744,0.3545832484592616,0.8625490196078431,0.0392156862745098,0.5333333333333333,0.7725490196078432,0.0006567632128992744,0.8082107518254754,0.8625490196078431,0.0006263063601074008,0.8225490196078432,0.6456585799587229&swatchOrder=0,1,2,3,4
-*/
+$link-blue:     $blue;
 
-$a1: #001FD2;
-$a2: #005ADC;
-$a3: #0A88C5;
-$a4: #00CEDC;
-$a5: #00D2A5;
+$gradient-dark: $blue-dark;
+$gradient-mid: $blue;
+$gradient-light: $blue-light;
 
 $rule-color: rgba($text-black, 0.5);
 $light-rule-color: $grey-7;
