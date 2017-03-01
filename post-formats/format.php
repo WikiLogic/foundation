@@ -18,23 +18,26 @@
     <div class="post-detail">
 
       <header class="post-detail__header">
-        <h1 class="entry-title single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
-        
-        <div class="post-meta">
-          <div class="post-meta__left">
-            By <?php the_author(); ?>, 
-            <?php echo get_the_time(get_option('date_format')); ?>
-          </div>
-
-          <div class="post-meta__right">
-            <?php printf( '%1$s' , get_the_category_list(', ') ); ?>
-          </div>
-        </div>
-
+        <h1 class="post-detail__header-text" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
       </header>
 
+
       <section class="post-detail__body" itemprop="articleBody">
-        <?php the_content(); ?>
+        <div class="post-detail__aside">
+          <div class="post-detail-meta">
+            <div class="post-detail-meta__left">
+              By <?php the_author(); ?>, 
+              <?php echo get_the_time(get_option('date_format')); ?>
+            </div>
+
+            <div class="post-detail-meta__right">
+              <?php printf( '%1$s' , get_the_category_list(', ') ); ?>
+            </div>
+          </div>
+        </div>
+        <div class="post-detail__content">
+          <?php the_content(); ?>
+        </div>
       </section>
 
       <footer class="article-footer">

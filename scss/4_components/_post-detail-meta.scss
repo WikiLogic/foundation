@@ -1,0 +1,27 @@
+.post-detail-meta {
+    font-size: rem(18);
+    display: flex;
+    justify-content: space-between;
+    font-style: italic;
+    font-family: $serif;
+
+    &__left {
+
+    }
+
+    &__right {
+        text-align: right;
+    }
+
+    @include breakpoint(medium){
+        flex-direction: column;
+        justify-content: flex-start;
+
+        &__left {
+
+        }
+        &__right {
+            text-align: left;
+        }
+    }
+}

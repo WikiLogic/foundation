@@ -1,13 +1,52 @@
 .post-detail {
-    padding-top: rem($pad * 4);
+    padding: rem($pad * 4) rem($pad);
 
     &__header {
         max-width: $site-width;
         margin: 0 auto rem($pad * 3);
-        border-bottom: 1px solid $rule-color;
+        &-text { //h1
+            font-size: rem(40);
+            font-weight: bold;
+        }
     }
+    
+
     &__body {
         max-width: $site-width;
         margin: 0 auto;
+    }
+        &__aside {
+            margin: 0 auto rem($pad * 3);
+            border-bottom: 1px solid $rule-color;
+        }
+
+        &__content {
+
+        }
+
+    @include breakpoint(medium){
+
+        &__body {
+            display: flex;
+            flex-direction: row;
+        }
+            &__aside {
+                width: 220px;
+                max-width: 220px;
+                min-width: 220px;
+                margin: 0 rem($pad * 3) 0 0;
+                border-bottom: 0;
+            }
+
+            &__content {
+            }
+    }
+
+    @include breakpoint(medium){
+        &__aside {
+            width: 300px;
+            max-width: 300px;
+            min-width: 300px;
+        }
     }
 }
