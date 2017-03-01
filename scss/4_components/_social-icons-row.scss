@@ -5,5 +5,7 @@
 
     &__icon {
         padding: rem($pad / 2);
+        svg { fill: rgba(white, 0.8); }
+        &:hover { svg { fill: white; }}
     }
 }
