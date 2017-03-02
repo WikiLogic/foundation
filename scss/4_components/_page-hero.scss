@@ -1,6 +1,9 @@
 .page-hero {
     text-align: center;
     padding: rem($pad * 7) rem($pad) rem($pad * 5);
+    color: white;
+    //position: relative; //these two to help with the video
+    //overflow: hidden;
 
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0050a5+0,008ddc+50,00c7ff+100 */
     background: $gradient-dark; /* Old browsers */
@@ -8,9 +11,10 @@
     background: -webkit-linear-gradient(-45deg,  $gradient-dark 0%,$gradient-mid 50%,$gradient-light 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(135deg,  $gradient-dark 0%,$gradient-mid 50%,$gradient-light 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-dark', endColorstr='$gradient-light',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-
-
-    color: white;
+    
+    &__video-expander-checkbox { //input checkbox just above the page-hero, to toggle the video
+        opacity: 0; display: none;
+    }
 
     &__title {
         display: block;
@@ -21,12 +25,13 @@
         
     }
 
-    &__button {
+    &__button { //label for checkbox #video-expander which is just above the page hero
         display: inline-block;
         background-color: transparent;
         border: 1px solid white;
         padding: rem($pad) rem($pad * 2);
         margin-bottom: rem($pad);
+        cursor: pointer;
 
         &-text {
             color: white;
@@ -44,6 +49,33 @@
         }
     }
 
+    &__video {
+        position: absolute;
+        z-index: 2;
+        top: rem(100);
+        left: 0; right: 0;
+        text-align: middle;
+        transform: translateY(-1000%);
+        opacity: 0;
+        transition: opacity 0.2s ease;
+
+        iframe {
+            display: inline-block;
+            max-width: 100%;
+        }
+    }
+
+    &__turn-off-the-lights {
+        position: absolute;
+        z-index: 1;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+        background-color: rgba(black, 0);
+        opacity: 0;
+        transform: translateY(-1000%);
+        transition: opacity 0.2s ease;
+    }
+
     //small link under the button linking to a more in depth description of WL
     &__link { //a
         font-style: italic;
@@ -52,6 +84,21 @@
         color: white;
         &:hover {
             text-decoration: underline;
+        }
+    }
+}
+
+//video playing mode!
+.page-hero__video-expander-checkbox:checked + .page-hero {
+    .page-hero {
+        &__video {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        &__turn-off-the-lights {
+            transform: translateY(0);
+            background-color: rgba(black, 0.6);
+            opacity: 0.6;
         }
     }
 }

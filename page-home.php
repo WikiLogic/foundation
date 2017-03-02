@@ -11,13 +11,16 @@ get_header(); ?>
 		<div class="page-detail">
 
 			<!-- big jumbotron with CTA button -->
+			<input type="checkbox" name="video-expander" id="video-expander" class="page-hero__video-expander-checkbox">
 			<div class="page-hero">
 
 				<h2 class="page-hero__title">The Wikilogic Foundation</h2>
+				
 				<p class="page-hear__sub-title">
 				“Don’t raise your voice, improve your argument”<br />
 				<small>– Demond Tutu</small></p>
-				<button class="page-hero__button">
+				
+				<label class="page-hero__button" for="video-expander">
 					<span class="page-hero__button-text">
 						What is Wikilogic?
 					</span>
@@ -26,7 +29,13 @@ get_header(); ?>
 							C23.394,45.941,23.197,46,23,46c-0.16,0-0.321-0.038-0.467-0.116C22.205,45.711,22,45.371,22,45V15c0-0.371,0.205-0.711,0.533-0.884
 							c0.328-0.174,0.724-0.15,1.031,0.058l22,15C45.836,29.36,46,29.669,46,30S45.836,30.64,45.563,30.826z"/>
 					</svg>
-				</button>
+				</label>
+
+				<div class="page-hero__video">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Yn193xNaMHg" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<label class="page-hero__turn-off-the-lights" for="video-expander"></label>
+
 				<!--
 				<a href="/what-is-wikilogic" class="page-hero__link">
 					In depth article
