@@ -63,11 +63,11 @@ get_header(); ?>
 
 			<div class="homepage-explainer">
 				<div class="homepage-explainer__max-width-wrap">
-				<p>Everyone knows about our inspiration site, Wikipedia: a place where you can share your own knowledge, correct other people's or learn something new. It stays relevant and up to date by allowing anyone the right to edit.</p>
+				<p>Everyone knows about our inspiration site, Wikipedia: a place where you can share your own knowledge, correct other people's or learn something new. It stays relevant and up to date by allowing everyone the right to edit.</p>
 				<p class="text-align-center"><strong>Wikipedia deals with the raw information.</strong></p>
-				<p>Wikilogic aims to follow the same model, except we're ...</p> 
-				<p class="text-align-center"><strong>we deal with how information is linked</strong></p>
-				<p>as evidence for claims. You may recognize this as an&nbsp;<a href="http://en.wikipedia.org/wiki/Argument_map">argument map</a>. The Wikilogic Foundation aims to ALL THE INFORMATION</p>
+				<p>Wikilogic aims to follow the same model, except we look at the evidence which backs up that information. Evidence that is also information.</p> 
+				<p class="text-align-center"><strong>We deal with how information is linked.</strong></p>
+				<p>You may recognize this as an <a href="http://en.wikipedia.org/wiki/Argument_map">argument map</a>. The Wikilogic Foundation aims to map out the links between ALL THE INFORMATION.</p>
 				</div>
 			</div>
 
