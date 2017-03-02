@@ -1,0 +1,53 @@
+.homepage-callouts {
+    padding: rem($pad * 4) rem($pad);
+
+    &__max-width-wrap {
+
+    }
+        .homepage-callout + .homepage-callout{
+            margin: rem($pad * 3) 0 0 0;
+        }
+
+    @include breakpoint(medium){        
+        &__max-width-wrap {
+            max-width: $site-width;
+            margin: 0 auto;
+            display: flex;
+        }   
+            .homepage-callout {
+                width: 33%;
+                margin: rem($pad);
+                + .homepage-callout { margin: rem($pad); }
+            }
+    }
+}
+
+.homepage-callout {
+    padding: rem($pad * 2) rem($pad);
+    text-align: center;
+    //background-color: rgba($WL_Blue, 0.1);
+
+    &--left {
+        border-top: 1px solid rgba($WL_Red, 0.2);
+        border-bottom: 1px solid rgba($WL_Red, 0.2);
+    }
+    &--center {
+        border-top: 1px solid rgba($WL_Blue, 0.2);
+        border-bottom: 1px solid rgba($WL_Blue, 0.2);
+    }
+    &--right {
+        border-top: 1px solid rgba($WL_Green, 0.2);
+        border-bottom: 1px solid rgba($WL_Green, 0.2);
+    }
+
+
+    &__title {
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $grey-1;
+        margin-bottom: rem($pad);
+    }
+    &__body {
+
+    }
+}

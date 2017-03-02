@@ -44,9 +44,34 @@ get_header(); ?>
 
 			</div>
 
-			<!-- Loop through "uses" as cards -->
+			<div class="homepage-callouts">
+				<div class="homepage-callouts__max-width-wrap">
+					<div class="homepage-callout homepage-callout--left">
+						<div class="homepage-callout__title">Who We Are</div>
+						<div class="homepage-callout__body">A group of exceedingly clever people. Or mad.</div>
+					</div>
+					<div class="homepage-callout homepage-callout--center">
+						<div class="homepage-callout__title">What We Do</div>
+						<div class="homepage-callout__body">Working to promote international discussion, free and open access to high quality interdisciplinary knowledge and the development of reasoned argument for the global population.</div>
+					</div>
+					<div class="homepage-callout homepage-callout--right">
+						<div class="homepage-callout__title">Get Involved</div>
+						<div class="homepage-callout__body">Blurb</div>
+					</div>
+				</div>
+			</div>
 
+			<div class="homepage-explainer">
+				<div class="homepage-explainer__max-width-wrap">
+				<p>Everyone knows about our inspiration site, Wikipedia: a place where you can share your own knowledge, correct other people's or learn something new. It stays relevant and up to date by allowing anyone the right to edit.</p>
+				<p class="text-align-center"><strong>Wikipedia deals with the raw information.</strong></p>
+				<p>Wikilogic aims to follow the same model, except we're ...</p> 
+				<p class="text-align-center"><strong>we deal with how information is linked</strong></p>
+				<p>as evidence for claims. You may recognize this as an&nbsp;<a href="http://en.wikipedia.org/wiki/Argument_map">argument map</a>. The Wikilogic Foundation aims to ALL THE INFORMATION</p>
+				</div>
+			</div>
 
+<!--
 			<div class="page-detail__body">
 
 				<?php
@@ -73,7 +98,8 @@ get_header(); ?>
 					) );
 				?>
 			</div>
-
+			-->
+<!--
 			<div class="uses">
 				<?php
 					$args = array( 'post_type' => 'use', 'posts_per_page' => 10 );
@@ -88,7 +114,7 @@ get_header(); ?>
 					endwhile;
 				?>
 			</div>
-
+-->
 
 			<?php //comments_template(); ?>
 

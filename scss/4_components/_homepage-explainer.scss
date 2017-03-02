@@ -1,0 +1,16 @@
+.homepage-explainer {
+    padding: rem($pad * 2) rem($pad);
+    @include defaultgradient();
+    color: white;
+
+    a {
+        color: white;
+        text-decoration: underline;
+    }
+
+    &__max-width-wrap {
+        max-width: $site-width * 0.75;
+        margin: 0 auto;
+        padding: rem($pad * 4) ;
+    }
+}

@@ -5,12 +5,7 @@
     //position: relative; //these two to help with the video
     //overflow: hidden;
 
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0050a5+0,008ddc+50,00c7ff+100 */
-    background: $gradient-dark; /* Old browsers */
-    background: -moz-linear-gradient(-45deg,  $gradient-dark 0%, $gradient-mid 50%, $gradient-light 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(-45deg,  $gradient-dark 0%,$gradient-mid 50%,$gradient-light 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(135deg,  $gradient-dark 0%,$gradient-mid 50%,$gradient-light 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$gradient-dark', endColorstr='$gradient-light',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+    @include defaultgradient();
     
     &__video-expander-checkbox { //input checkbox just above the page-hero, to toggle the video
         opacity: 0; display: none;
