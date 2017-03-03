@@ -23,6 +23,7 @@
         > li {
             display: block;
             padding: rem($pad);
+            &.current_page_item a { font-weight: bold; }
 
             > a {
                 font-size: rem(14);

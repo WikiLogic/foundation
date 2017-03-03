@@ -80,6 +80,7 @@
 						</nav>
 					</div>
 					<p class="footer__copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo( 'name' ); ?>.</p>
+					<p class="footer__copyright">Note: Wikilogic shares many of the same ideals as Wikipedia and<br />the Wikimedia foundation but we are unaffiliated in anyway.</p>
 				</div>
 
 			</div>

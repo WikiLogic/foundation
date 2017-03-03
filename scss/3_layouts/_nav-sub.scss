@@ -3,43 +3,46 @@
  * Then we hide all the main links and show only the children of the current page.
  */
 .sub-nav {
-    ul, li {
-        margin: 0;
-        padding: 0;
-    }
+    display: none;
 
-    > ul {
-        >li {
-            display: none;
+    @include breakpoint(large){
+        display: block;
+        
+        ul, li {
+            margin: 0;
+            padding: 0;
+        }
 
-            &.current_page_item,
-            &.current_page_ancestor {
-                display: block;
-                > a { display: none; }
-                > ul { 
-                    display: flex; 
-                    justify-content: flex-end;
+        > ul {
+            >li {
+                display: none;
 
-                    li {
-                        padding: 0 rem($pad);
-                        a {
-                            color: white;
+                &.current_page_item,
+                &.current_page_ancestor {
+                    display: block;
+                    > a { display: none; }
+                    > ul { 
+                        display: flex; 
+                        justify-content: flex-end;
+
+                        li {
                             padding: 0 rem($pad);
-                        }
-
-                        &.current_page_item,
-                        &.current-menu-item {
                             a {
-                                border-bottom: 1px solid white;
-                                font-weight: bold;
+                                color: white;
+                                padding: 0 rem($pad);
+                            }
+
+                            &.current_page_item,
+                            &.current-menu-item {
+                                a {
+                                    border-bottom: 1px solid white;
+                                    font-weight: bold;
+                                }
                             }
                         }
                     }
                 }
             }
         }
-    }
-    .current_page_item {
-
     }
 }
