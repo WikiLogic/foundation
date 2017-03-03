@@ -5,7 +5,34 @@
 
 		<div class="page-detail">
 			<div class="page-detail__header">
-				<h1 class="page-detail__title" itemprop="headline"><?php the_title(); ?></h1>
+
+				<nav class="sub-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php
+						$menu = wp_nav_menu(
+							array(
+								'theme_location'  => 'main-nav',
+								'menu'            => '',
+								'container'       => '',
+								'container_class' => '',
+								'container_id'    => '',
+								'menu_class'      => '',
+								'menu_id'         => '',
+								'echo'            => false,
+								'fallback_cb'     => 'wp_page_menu',
+								'before'          => '',
+								'after'           => '',
+								'link_before'     => '',
+								'link_after'      => '',
+								'items_wrap'      => '<ul>%3$s</ul>',
+								'depth'           => 3,
+								'walker'          => ''
+							)
+						);
+
+						if ( $menu ) {  echo $menu; }
+					?>
+				</nav>
+				
 			</div>
 
 			<div class="page-detail__body">

@@ -1,12 +1,40 @@
 <?php get_header(); ?>
 		
 	<div class="page-detail__header">
+		<nav class="sub-nav" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<?php
+				$menu = wp_nav_menu(
+					array(
+						'theme_location'  => 'main-nav',
+						'menu'            => '',
+						'container'       => '',
+						'container_class' => '',
+						'container_id'    => '',
+						'menu_class'      => '',
+						'menu_id'         => '',
+						'echo'            => false,
+						'fallback_cb'     => 'wp_page_menu',
+						'before'          => '',
+						'after'           => '',
+						'link_before'     => '',
+						'link_after'      => '',
+						'items_wrap'      => '<ul>%3$s</ul>',
+						'depth'           => 3,
+						'walker'          => ''
+					)
+				);
+
+				if ( $menu ) {  echo $menu; }
+			?>
+		</nav>
+		<!--
 		<h1 class="page-detail__title" itemprop="headline">
 			<?php
 			the_archive_title();
 			the_archive_description( '<div class="taxonomy-description">', '</div>' );
 			?>
 		</h1>
+		-->
 	</div>
 	<div class="post-list">
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>

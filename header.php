@@ -68,7 +68,7 @@
 								'after'           => '',
 								'link_before'     => '',
 								'link_after'      => '',
-								'items_wrap'      => '<ul class="nav__list">%3$s</ul>',
+								'items_wrap'      => '<ul>%3$s</ul>',
 								'depth'           => 3,
 								'walker'          => ''
 							)

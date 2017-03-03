@@ -26,9 +26,15 @@
             > a {
                 font-size: rem(22);
             }
+
         }
     }
     
+    .current_page_item,
+    .current_page_parent {
+        > a { font-weight: bold; }
+    }
+
     //second level
     ul li ul {
         margin-top: rem($pad); //give it some space from it's parent / title
@@ -37,6 +43,8 @@
             + li {
                 margin-top: rem($pad);
             }
+
+            &.current-menu-item a { font-weight: bold; }
         }
             a {
                 font-size: rem(16);

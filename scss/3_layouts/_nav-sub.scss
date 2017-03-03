@@ -1,0 +1,45 @@
+/* It's a bit mad but...
+ * This repeats the main nav in the blue sub header.
+ * Then we hide all the main links and show only the children of the current page.
+ */
+.sub-nav {
+    ul, li {
+        margin: 0;
+        padding: 0;
+    }
+
+    > ul {
+        >li {
+            display: none;
+
+            &.current_page_item,
+            &.current_page_ancestor {
+                display: block;
+                > a { display: none; }
+                > ul { 
+                    display: flex; 
+                    justify-content: flex-end;
+
+                    li {
+                        padding: 0 rem($pad);
+                        a {
+                            color: white;
+                            padding: 0 rem($pad);
+                        }
+
+                        &.current_page_item,
+                        &.current-menu-item {
+                            a {
+                                border-bottom: 1px solid white;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .current_page_item {
+
+    }
+}

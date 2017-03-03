@@ -55,7 +55,9 @@
         //main menu "boxes"
         li {
             + li { margin-top: 0; }
-            &.selected a { border-bottom: 1px solid $link-blue; }
+            &.selected a,
+            &.current_page_item a,
+            &.current_page_parent a { border-bottom: 1px solid $link-blue; }
         }
 
         a {
