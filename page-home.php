@@ -56,7 +56,9 @@ get_header(); ?>
 					</div>
 					<div class="homepage-callout homepage-callout--right">
 						<div class="homepage-callout__title">Get Involved</div>
-						<div class="homepage-callout__body">Blurb</div>
+						<div class="homepage-callout__body">
+							<a href="/get-involved">Develop the idea, write the code, come say hi.</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -67,7 +69,7 @@ get_header(); ?>
 				<p class="text-align-center"><strong>Wikipedia deals with the raw information.</strong></p>
 				<p>Wikilogic aims to follow the same model, except we look at the evidence which backs up that information. Evidence that is also information.</p> 
 				<p class="text-align-center"><strong>We deal with how information is linked.</strong></p>
-				<p>You may recognize this as an <a href="http://en.wikipedia.org/wiki/Argument_map">argument map</a>. The Wikilogic Foundation aims to map out the links between ALL THE INFORMATION.</p>
+				<p>You may recognize this as an <a href="http://en.wikipedia.org/wiki/Argument_map">argument map</a>. The Wikilogic Foundation aims to map out the links between all information.</p>
 				</div>
 			</div>
 
