@@ -47,21 +47,21 @@ get_header(); ?>
 			<div class="homepage-callouts">
 				<div class="homepage-callouts__max-width-wrap">
 					<div class="homepage-callout homepage-callout--left">
-						<div class="homepage-callout__title">Who we are</div>
+						<div class="homepage-callout__title"><?php the_field('left_callout_title'); ?></div>
 						<div class="homepage-callout__body">
-							A group of philosophers, programmers, and people generally interested in furthering the level of public reasoning.<br /> 
-							<a href="/get-involved">Join us</a>.
+							<?php the_field('left_callout_body'); ?>
 						</div>
 					</div>
 					<div class="homepage-callout homepage-callout--center">
-						<div class="homepage-callout__title">What we do</div>
-						<div class="homepage-callout__body">Working to promote international discussion, free and open access to high quality interdisciplinary knowledge and the development of reasoned argument for the global population.</div>
+						<div class="homepage-callout__title"><?php the_field('middle_callout_title'); ?></div>
+						<div class="homepage-callout__body">
+							<?php the_field('middle_callout_body'); ?>
+						</div>
 					</div>
 					<div class="homepage-callout homepage-callout--right">
-						<div class="homepage-callout__title">Why we do this</div>
+						<div class="homepage-callout__title"><?php the_field('right_callout_title'); ?></div>
 						<div class="homepage-callout__body">
-							The advancement of education for the public globally. For Social good. To make the world a better place.<br />
-							<a href="/get-involved">Get Involved</a>.
+							<?php the_field('right_callout_body'); ?>
 						</div>
 					</div>
 				</div>
@@ -69,11 +69,7 @@ get_header(); ?>
 
 			<div class="homepage-explainer">
 				<div class="homepage-explainer__max-width-wrap">
-				<p>Everyone knows about our inspiration site, Wikipedia: a place where you can share your own knowledge, correct other people's or learn something new. It stays relevant and up to date by allowing everyone the right to edit.</p>
-				<p class="text-align-center"><strong>Wikipedia deals with the raw information.</strong></p>
-				<p>Wikilogic aims to follow the same model, except we look at the evidence which backs up that information. Evidence that is also information.</p> 
-				<p class="text-align-center"><strong>We deal with how information is linked.</strong></p>
-				<p>You may recognize this as an <a href="http://en.wikipedia.org/wiki/Argument_map">argument map</a>. The Wikilogic Foundation aims to map out the links between all information.</p>
+					<?php the_field('lead_description'); ?>
 				</div>
 			</div>
 
