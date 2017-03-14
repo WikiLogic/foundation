@@ -7,7 +7,7 @@ require_once( 'php-helpers/pagination.php' );
 require_once( 'php-helpers/related-posts.php' );
 require_once( 'php-helpers/theme-support.php' );
 require_once( 'php-helpers/wp-cleanup.php' );
-// require_once( 'php-helpers/customize-admin.php' );
+require_once( 'php-helpers/customize-admin.php' );
 
 /* Run the helpers */
 function bones_ahoy() {
