@@ -4,7 +4,11 @@ button
 */
 
 
-button, .button {
+button {
+	background: transparent;
+	border: none;
+}
+.button {
 
 	padding: rem($pad) rem($pad * 2);
 	color: $link-blue;
