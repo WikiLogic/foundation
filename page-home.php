@@ -47,17 +47,21 @@ get_header(); ?>
 			<div class="homepage-callouts">
 				<div class="homepage-callouts__max-width-wrap">
 					<div class="homepage-callout homepage-callout--left">
-						<div class="homepage-callout__title">Who We Are</div>
-						<div class="homepage-callout__body">A group of exceedingly clever people. Or mad.</div>
+						<div class="homepage-callout__title">Who we are</div>
+						<div class="homepage-callout__body">
+							A group of philosophers, programmers, and people generally interested in furthering the level of public reasoning.<br /> 
+							<a href="/get-involved">Join us</a>.
+						</div>
 					</div>
 					<div class="homepage-callout homepage-callout--center">
-						<div class="homepage-callout__title">What We Do</div>
+						<div class="homepage-callout__title">What we do</div>
 						<div class="homepage-callout__body">Working to promote international discussion, free and open access to high quality interdisciplinary knowledge and the development of reasoned argument for the global population.</div>
 					</div>
 					<div class="homepage-callout homepage-callout--right">
-						<div class="homepage-callout__title">Get Involved</div>
+						<div class="homepage-callout__title">Why we do this</div>
 						<div class="homepage-callout__body">
-							<a href="/get-involved">Develop the idea, write the code, come say hi.</a>
+							The advancement of education for the public globally. For Social good. To make the world a better place.<br />
+							<a href="/get-involved">Get Involved</a>.
 						</div>
 					</div>
 				</div>
