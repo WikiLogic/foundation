@@ -1,4 +1,9 @@
 img {
 	display:block;
 	max-width: 100%;
+
+	&.aligncenter {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
