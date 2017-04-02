@@ -18,11 +18,11 @@ get_header(); ?>
 				
 				<p class="page-hear__sub-title">
 				“Don’t raise your voice, improve your argument”<br />
-				<small>– Demond Tutu</small></p>
+				<small>– Desmond Tutu</small></p>
 				
 				<label class="page-hero__button" for="video-expander">
 					<span class="page-hero__button-text">
-						What is Wikilogic?
+						What is Wikilogic? Watch this video
 					</span>
 					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60">
 						<path d="M30,0C13.458,0,0,13.458,0,30s13.458,30,30,30s30-13.458,30-30S46.542,0,30,0z M45.563,30.826l-22,15
