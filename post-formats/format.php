@@ -26,7 +26,7 @@
         <div class="post-detail__aside">
           <div class="post-detail-meta">
             <div class="post-detail-meta__left">
-              By <?php the_author(); ?>, 
+              By <?php the_author(); ?>,
               <?php echo get_the_time(get_option('date_format')); ?>
             </div>
 

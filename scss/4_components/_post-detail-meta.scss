@@ -14,14 +14,14 @@
     }
 
     @include breakpoint(medium){
-        flex-direction: column;
-        justify-content: flex-start;
+        // flex-direction: column;
+        // justify-content: flex-start;
 
-        &__left {
+        // &__left {
 
-        }
-        &__right {
-            text-align: left;
-        }
+        // }
+        // &__right {
+        //     text-align: left;
+        // }
     }
 }

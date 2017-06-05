@@ -26,27 +26,27 @@
 
     @include breakpoint(medium){
 
-        &__body {
-            display: flex;
-            flex-direction: row;
-        }
-            &__aside {
-                width: 220px;
-                max-width: 220px;
-                min-width: 220px;
-                margin: 0 rem($pad * 3) 0 0;
-                border-bottom: 0;
-            }
+        // &__body {
+        //     display: flex;
+        //     flex-direction: row;
+        // }
+        //     &__aside {
+        //         width: 220px;
+        //         max-width: 220px;
+        //         min-width: 220px;
+        //         margin: 0 rem($pad * 3) 0 0;
+        //         border-bottom: 0;
+        //     }
 
-            &__content {
-            }
+        //     &__content {
+        //     }
     }
 
     @include breakpoint(medium){
-        &__aside {
-            width: 300px;
-            max-width: 300px;
-            min-width: 300px;
-        }
+        // &__aside {
+        //     width: 300px;
+        //     max-width: 300px;
+        //     min-width: 300px;
+        // }
     }
 }

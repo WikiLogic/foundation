@@ -47,9 +47,11 @@ p.small   { font-size: 0.6em;}
 }
 
 code, pre {
-	background: #000;
-	color: #ccc;
-	font: 12px/1.2 Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+	background: #eee;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	font-family: Menlo, Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+	display: inline-block;
 }
 
 span {
