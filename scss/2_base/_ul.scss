@@ -6,3 +6,26 @@ ul {
 
 	}
 }
+
+.post-detail__content,
+.page-detail__body {
+	ul {
+		line-height: 1.2;
+		padding-left: 24px;
+
+		list-style-type: disc;
+		ul {
+			list-style-type: circle;
+			ul {
+				list-style-type: disc;
+				ul {
+					list-style-type: circle;
+				}
+			}
+		}
+
+		li {
+
+		}
+	}
+}

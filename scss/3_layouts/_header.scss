@@ -98,7 +98,7 @@
          }
 
         &__search-toggler:checked + .header {
-            background-color: $blue;
+            background-color: $dark-blue;
             .header__title { width: auto; display: block; } //overriding the hiding behaviour from the smaller screen
             .header__search { left: 50%; width: auto; }
         }

@@ -1,21 +1,21 @@
 /* colors */
+$WL_Red:		  #f05d65; 
+$WL_Red--light:   #fcf2f3;
+$WL_Green:		  #31D332; 
+$WL_Green--light: #31D332; 
+$WL_Blue: 		  #5f9aec;
 
-$blue-dark:  #0050A5;
-$blue: 		 #008ddc;
-$blue-light: #00C7FF;
-
-$WL_Blue: $blue;
-$WL_Red:		#F25454; 
-$WL_Green:		#31D332; 
+$dark-blue:     #111F2E; $blue-dark: $dark-blue; $header-background: $dark-blue;
+$light-blue:    #0a4471; $blue-light: $light-blue;
+$link-blue:     #0a88c5; 
+$link-blue-hover:     $dark-blue;
 
 /* shades of grey */
-$off-white:     #f3f7fb;
-$grey-e:		#eeeeee;
-$grey-d:		#dfe9ef;
-$grey-c:		#ced8de;
-$grey-b:		#b2d4e4;
+$grey-e:		#eeeeee; $sub-header-background: $grey-e;
+$grey-d:		#dddddd;
+$grey-c:		#cccccc;
+$grey-b:		#bbbbbb;
 $grey-a:		#aaaaaa;
-$grey-7:        #7a909a;
 $grey-6:		#6f8db9;
 $grey-5:		#5e7ca8;
 $grey-4:		#4e6a92;
@@ -24,13 +24,9 @@ $grey-2:		#223856;
 $grey-1:		#131E2D;  //default grey-dark
 $text-black: 	rgba(0,0,0,0.87);
 
-
-$link-blue:     $blue;
-$link-blue-hover:     $blue-dark;
-
-$gradient-dark: $blue-dark;
-$gradient-mid: $blue;
-$gradient-light: $blue-light;
+$gradient-dark: $dark-blue;
+$gradient-mid: $light-blue;
+$gradient-light: $link-blue;
 
 $rule-color: rgba($text-black, 0.5);
-$light-rule-color: $grey-7;
+$light-rule-color: $link-blue;

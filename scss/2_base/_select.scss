@@ -5,7 +5,7 @@ select {
 	outline: none;
 	color: black;
 	&:focus {
-		box-shadow: 0 0 5px $blue;
-		border: 1px solid $blue;
+		box-shadow: 0 0 5px $light-blue;
+		border: 1px solid $light-blue;
 	}
 }
